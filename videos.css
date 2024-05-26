@@ -1,0 +1,290 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.active {
+    border-bottom: 3px solid white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f0faff;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 200px;
+    background: #4a98f7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav .logo {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.nav .nav-links {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    list-style: none;
+}
+
+.nav .nav-links a {
+    transition: all 0.2s linear;
+}
+
+.nav.openSearch .nav-links a {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav .search-icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav .search-box {
+    position: absolute;
+    right: 250px;
+    height: 45px;
+    max-width: 555px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s linear;
+}
+
+.nav.openSearch .search-box {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #4a98f7;
+    transform: translateY(-50%);
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0 15px 0 45px;
+}
+
+.nav .navOpenBtn, .nav .navCloseBtn {
+    display: none;
+}
+
+.n-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 190px;
+}
+
+.n-name h1{
+    font-size: 30px;
+}
+
+.n-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: -21px;
+}
+
+.n-btn button{
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px grey solid;
+    background-color: lightblue;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#fc-last{
+    margin-bottom: 300px;
+}
+
+
+
+
+
+
+
+
+
+main {
+    flex: 1;
+    margin-top: 200px;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1160px) {
+    .nav {
+        padding: 15px 100px;
+    }
+    .nav .search-box {
+        right: 150px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .nav {
+        padding: 15px 50px;
+    }
+    .nav .search-box {
+        right: 100px;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        padding: 15px 20px;
+    }
+    .nav .navOpenBtn, .nav .navCloseBtn {
+        display: block;
+    }
+    .nav .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        max-width: 280px;
+        width: 100%;
+        padding-top: 100px;
+        flex-direction: column;
+        background-color: #11101d;
+        transition: all 0.4s ease;
+        z-index: 100;
+    }
+    .nav.openNav .nav-links {
+        left: 0;
+    }
+    .nav .navOpenBtn, .nav .navCloseBtn {
+        font-size: 20px;
+        cursor: pointer;
+        color: #fff;
+    }
+    .nav .search-box {
+        top: calc(100% + 10px);
+        max-width: calc(100% - 20px);
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .cs-title {
+        margin-top: 100px;
+    }
+    .cs-title h1 {
+        font-size: 35px;
+    }
+    .course-img img {
+        width: 90%;
+    }
+    .course-name h1 {
+        font-size: 30px;
+    }
+    .course-info h2 {
+        font-size: 18px;
+    }
+    .course-btn button {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+    .lb h1 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .nav .logo {
+        font-size: 20px;
+    }
+    .cs-title h1 {
+        font-size: 30px;
+    }
+    .course-name h1 {
+        font-size: 25px;
+    }
+    .course-info h2 {
+        font-size: 16px;
+    }
+    .course-btn button {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .cs-title h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .cs-title h1 {
+        font-size: 20px;
+    }
+    .course-name h1 {
+        font-size: 20px;
+    }
+    .course-info h2 {
+        font-size: 14px;
+    }
+    .course-btn button {
+        font-size: 16px;
+    }
+}
